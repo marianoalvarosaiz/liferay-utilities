@@ -10,4 +10,10 @@ How to configure it:
 
    1. Ensure that the generated `com.liferay.redis.redisson.integration.jar` is placed in `$TOMCAT_HOME/lib/ext`.
    2. Change the configuration to use `com.liferay.redis.redisson.integration.tomcat.LiferayRedissonSessionManager` instead of `org.redisson.tomcat.RedissonSessionManager`.
+   ```
+   <Manager className="com.liferay.redis.redisson.integration.tomcat.LiferayRedissonSessionManager"
+  configPath="${catalina.base}/redisson.conf" 
+  readMode="REDIS" updateMode="DEFAULT" broadcastSessionEvents="false"/>
+  ```
+  
 
