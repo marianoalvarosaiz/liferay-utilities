@@ -8,6 +8,6 @@ This solution is based on how Liferay handles PortletSession replication, which 
 ## How to Configure:
 How to configure it:
 
-   1. Ensure that the generated `com.liferay.redis.redisson.integration.jar` is placed in `$TOMCAT_HOME/lib/ext`
+   1. Ensure that the generated `com.liferay.redis.redisson.integration.jar` is placed in `$TOMCAT_HOME/lib/ext`.
    2. Change the configuration to use `com.liferay.redis.redisson.integration.tomcat.LiferayRedissonSessionManager` instead of `org.redisson.tomcat.RedissonSessionManager`.
 
