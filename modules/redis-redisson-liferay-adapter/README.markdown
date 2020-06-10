@@ -27,5 +27,5 @@ How to configure it:
     },
     }
 ```
-   3. Deploy in `$LIFERAY_HOME/deploy` the module `com.liferay.redis.tomcat.adapter.jar`
+   3. Deploy in `$LIFERAY_HOME/deploy` the module `com.liferay.redis.tomcat.adapter.jar`.
 
