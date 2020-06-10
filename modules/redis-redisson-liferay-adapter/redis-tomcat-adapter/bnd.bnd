@@ -1,0 +1,5 @@
+Bundle-Activator: com.liferay.redis.tomcat.adapter.internal.activator.RedisTomcatAdapterBundleActivator
+Bundle-Name: Liferay Redis Tomcat Adapter
+Bundle-SymbolicName: com.liferay.redis.tomcat.adapter
+Bundle-Version: 1.0.0
+DynamicImport-Package: *

@@ -1,0 +1,5 @@
+dependencies {
+	compileOnly group: "com.liferay", name: "com.liferay.petra.lang", version: "4.0.1"
+	compileOnly group: "org.osgi", name: "osgi.core", version: "6.0.0"
+	compileOnly project(":modules:redis-redisson-liferay-adapter:redis-tomcat-client")
+}
