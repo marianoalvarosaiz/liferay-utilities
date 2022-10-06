@@ -16,23 +16,29 @@ class ClusterNodesDebugInformation {
         out.println("=== " + new Date());
 
         out.println("================================================================");
-        out.println("=== Current Cluster Node: ");
-        printClusterNodeInformation(ClusterExecutorUtil.getLocalClusterNode(), out);
+        try{
+            out.println("=== Current Cluster Node: ");
+            printClusterNodeInformation(ClusterExecutorUtil.getLocalClusterNode(), out);
 
-        List<ClusterNode> clusterNodes = ClusterExecutorUtil.getClusterNodes();
+            List<ClusterNode> clusterNodes = ClusterExecutorUtil.getClusterNodes();
 
-        out.println("================================================================");
-        out.println("=== Total cluster nodes: " + clusterNodes.size());
-
-        int i = 0;
-
-        for(ClusterNode clusterNode: clusterNodes) {
             out.println("================================================================");
-            out.println("=== Cluster Node # " + i);
-            
-            printClusterNodeInformation(clusterNode, out);
+            out.println("=== Total cluster nodes: " + clusterNodes.size());
 
-            i++;
+            int i = 0;
+
+            for(ClusterNode clusterNode: clusterNodes) {
+                out.println("================================================================");
+                out.println("=== Cluster Node # " + i);
+                
+                printClusterNodeInformation(clusterNode, out);
+
+                i++;
+            }
+        } catch (Exception exception) {
+            out.println("Failed to get nodes information.");
+            out.println("Exception:" + exception);
+            // exception.printStackTrace(out);
         }
         
     }
